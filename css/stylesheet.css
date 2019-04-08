@@ -1,0 +1,116 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 0;
+}
+h1 {
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  outline: none;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: '...';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+button:hover span {
+  padding-right: 25px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+nav {
+  text-align: center;
+  position: sticky;
+  background: #333;
+  overflow: hidden;
+}
+nav ul li {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #fcfcfc;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+nav ul li:hover {
+  background: #ddd;
+  color: #000;
+}
+nav ul li.active{
+  cursor: default;
+  background: #4CAF50;
+  color: #fff;
+}
+#main {
+  text-align: center;
+}
+.mainTimer{
+  font-size: 10em;
+}
+.sliderContainer {
+  width: 100%;
+  text-align: center;
+}
+.sliderHolder {
+  margin: 25px 0 15px 0;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}

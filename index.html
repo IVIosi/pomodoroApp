@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Pomodoro Application</title>
+        <link rel="stylesheet" href="./css/stylesheet.css" >
+        <noscript>Please turn on your JavaScript...</noscript>
+    </head>
+    <body>
+        <header>
+            <h1>Pomodoro</h1>
+        </header>
+        <nav>
+            <ul>
+                <li class="active">Main Page</li>
+                <li class="">Settings</li>
+            </ul>
+        </nav>
+        <section id="main">
+            <div id="remainingTime" class="mainTimer">--:--</div>
+            <button onclick="startTimer()"><span>Start</span></button>
+            <button onclick="resetTimer()"><span>Reset</span></button>
+            <table></table>
+        </section>
+        <section id="settings">
+            <form name="settingsForm" class="sliderContainer">
+                <div class="sliderHolder">
+                    <input name="activeTime" title="Activity Time" class="slider" type="range" min="0" max="60" onchange="resetTimer()">
+                    <div id="activeTimeValue">30:00</div>
+                </div>
+                <div class="sliderHolder">
+                    <input name="shortBreak" title="Break Time" class="slider" type="range" min="0" max="20" onchange="resetBreakTimer()">
+                    <div id="breakTimeValue">10:00</div>
+                </div>
+            </form>
+        </section>
+        <footer>
+            <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">What is Pomodoro?</a>
+        </footer>
+    </body>
+    <script src="./js/main.js"></script>
+</html>
