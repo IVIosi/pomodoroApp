@@ -18,19 +18,23 @@
         </nav>
         <section id="main">
             <div id="remainingTime" class="mainTimer">--:--</div>
-            <button onclick="startTimer()"><span>Start</span></button>
+            <button onclick="setTimerAndStart()"><span>Start</span></button>
             <button onclick="resetTimer()"><span>Reset</span></button>
             <table></table>
         </section>
         <section id="settings">
             <form name="settingsForm" class="sliderContainer">
                 <div class="sliderHolder">
-                    <input name="activeTime" title="Activity Time" class="slider" type="range" min="0" max="60" onchange="resetTimer()">
-                    <div id="activeTimeValue">30:00</div>
+                    <input name="active" title="Activity Time" class="slider" type="range" min="0" max="50" onchange="showSliderValue(event)">
+                    <div id="activeTimeValue">25:00</div>
                 </div>
                 <div class="sliderHolder">
-                    <input name="shortBreak" title="Break Time" class="slider" type="range" min="0" max="20" onchange="resetBreakTimer()">
-                    <div id="breakTimeValue">10:00</div>
+                    <input name="shortBreak" title="Short Break Time" class="slider" type="range" min="0" max="20" onchange="showSliderValue(event)">
+                    <div id="shortBreakTimeValue">10:00</div>
+                </div>
+                <div class="sliderHolder">
+                    <input name="longBreak" title="Long Break Time" class="slider" type="range" min="0" max="20" onchange="showSliderValue(event)">
+                    <div id="longBreakTimeValue">10:00</div>
                 </div>
             </form>
         </section>
