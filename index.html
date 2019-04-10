@@ -9,6 +9,7 @@
     <body>
         <header>
             <h1>Pomodoro</h1>
+            <h3>A simple pomodoro technique app</h3>
         </header>
         <nav>
             <ul>
@@ -18,24 +19,32 @@
         </nav>
         <section id="main">
             <div id="remainingTime" class="mainTimer">--:--</div>
-            <button onclick="startTimer()"><span>Start</span></button>
+            <button onclick="setTimerAndStart()"><span>Start</span></button>
             <button onclick="resetTimer()"><span>Reset</span></button>
             <table></table>
         </section>
         <section id="settings">
             <form name="settingsForm" class="sliderContainer">
                 <div class="sliderHolder">
-                    <input name="activeTime" title="Activity Time" class="slider" type="range" min="0" max="60" onchange="resetTimer()">
-                    <div id="activeTimeValue">30:00</div>
+                    <label>Set activity time:</label>
+                    <input name="active" title="Activity Time" class="slider" type="range" min="0" max="90" value="25" onchange="showSliderValue(event)">
+                    <div id="activeTimeValue">25:00</div>
                 </div>
                 <div class="sliderHolder">
-                    <input name="shortBreak" title="Break Time" class="slider" type="range" min="0" max="20" onchange="resetBreakTimer()">
-                    <div id="breakTimeValue">10:00</div>
+                    <label>Set short break time:</label>
+                    <input name="shortBreak" title="Short Break Time" class="slider" type="range" min="0" max="20" value="5" onchange="showSliderValue(event)">
+                    <div id="shortBreakTimeValue">5:00</div>
+                </div>
+                <div class="sliderHolder">
+                    <label>Set long break time:</label>
+                    <input name="longBreak" title="Long Break Time" class="slider" type="range" min="0" max="30" value="15" onchange="showSliderValue(event)">
+                    <div id="longBreakTimeValue">15:00</div>
                 </div>
             </form>
         </section>
         <footer>
-            <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">What is Pomodoro?</a>
+            <span><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">What is Pomodoro?</a></span>
+            <span>under<a href="https://opensource.org/licenses/MIT"> MIT license</a></span>
         </footer>
     </body>
     <script src="./js/main.js"></script>
