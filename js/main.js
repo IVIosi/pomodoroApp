@@ -1,3 +1,5 @@
+"use strict";
+
 var activityTime, shortBreakTime, longBreakTime;
 var activeCounter = 1, shortBreakCounter = 0 , longBreakCounter = 1;
 var startTimer;
