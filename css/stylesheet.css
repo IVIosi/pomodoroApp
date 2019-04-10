@@ -3,8 +3,23 @@ body {
   font-size: 100%;
   margin: 0;
 }
-h1 {
-
+header {
+  text-align: center;
+}
+footer {
+  background: #1abc9c;
+  padding: 20px;
+  text-align: center;
+}
+footer span {
+  display: block;
+  padding: 20px 5px 5px 5px;
+}
+footer a {
+  color: #000;
+}
+footer a:hover {
+  color: #fcfcfc;
 }
 ul {
   list-style-type: none;
@@ -82,6 +97,10 @@ nav ul li.active{
   text-align: center;
 }
 .sliderHolder {
+  margin: 25px 0 15px 0;
+}
+.sliderHolder label {
+  display: block;
   margin: 25px 0 15px 0;
 }
 .slider {
